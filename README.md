@@ -13,7 +13,7 @@ AnyDirect is an open source website that allows users to create redirect URLs wi
 
 # Preview
 
-<img src="/src/IMG_6115.gif">
+<img src="/src/IMG_6115.gif" height="600">
 
 
 # Usage
