@@ -1,4 +1,8 @@
 # AnyDirect
-Fully Customizable Link Previews
+## Fully Customizable Link Previews
 
-<img src="/src/AnyDirect-full-transparent.png">
+<div align="center">
+
+<img src="/src/v3-anydirect-full-whiteBG.png">
+
+</div>
