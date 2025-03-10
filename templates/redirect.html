@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ preview.preview_text }}</title>
+
+    <!-- Social media preview tags -->
+    <meta property="og:title" content="{{ preview.preview_text }}">
+    <meta property="og:description" content="{{ preview.preview_description }}">
+    <meta property="og:image" content="{{ preview.preview_image }}">
+    <meta property="og:url" content="{{ preview.link }}">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Automatic redirect -->
+    <meta http-equiv="refresh" content="0;url={{ preview.link }}">
+</head>
+
+<body>
+    <script>
+        // Redirect immediately via JavaScript as a fallback
+        window.location.href = "{{ preview.link }}";
+    </script>
+
+    <!-- Fallback content if JavaScript is disabled -->
+    <div style="text-align: center; margin-top: 100px;">
+        <h1>{{ preview.preview_text }}</h1>
+        <p>{{ preview.preview_description }}</p>
+        <p>If you are not redirected automatically, <a href="{{ preview.link }}">click here</a>.</p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Short Link Created!</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="icon" href="/src/anydirect-enlarged-transparent.png">
+</head>
+
+<body>
+    <div class="container mt-5 text-center">
+        <div class="alert alert-success">
+            <h1>🎉 Your short link is ready!</h1>
+        </div>
+
+        <div class="card p-4 mb-4">
+            <h2>Your link:</h2>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" id="shortlink" value="{{ shortlink }}" readonly>
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" onclick="copyToClipboard()">Copy</button>
+                </div>
+            </div>
+            <p class="text-muted">Make sure to save this link - you won't be able to retrieve it later!</p>
+        </div>
+
+        <a href="{{ url_for('index') }}" class="btn btn-primary">Create Another Link</a>
+    </div>
+
+    <script>
+        function copyToClipboard() {
+            var copyText = document.getElementById("shortlink");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            document.execCommand("copy");
+            alert("Link copied to clipboard!");
+        }
+    </script>
+</body>
+
+</html>
